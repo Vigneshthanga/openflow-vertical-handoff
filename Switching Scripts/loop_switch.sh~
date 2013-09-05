@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script opens 4 terminal windows.
+
+i="0"
+
+while [ $i -lt 4 ]
+do
+./switch_from_wlan0_to_wlan1.sh
+sleep 30
+./switch_from_wlan1_to_wlan0.sh
+sleep 30
+done
